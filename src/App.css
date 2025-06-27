@@ -1,0 +1,191 @@
+/* Import Google Font - Nunito for heading and table headers */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+/* General Page Styles */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f8ff; /* Light blue background */
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Page Heading */
+h1 {
+  font-family: 'Nunito', sans-serif; /* Modern rounded font */
+  font-size: 3rem; /* Larger font size */
+  color: #333; /* Dark color for text */
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 700; /* Bold weight */
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #ffffff; /* White background for controls */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.controls input {
+  width: 45%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.controls input:focus {
+  outline: none;
+  border-color: #007bff; /* Blue border on focus */
+}
+
+.controls label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.controls select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 10px; /* Added margin to ensure space on both sides */
+}
+
+/* Hover effect for Page Entries and Date Filter Dropdowns */
+.controls select:hover {
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* Focus effect for Dropdowns */
+.controls select:focus {
+  outline: none;
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  text-align: left;
+  word-wrap: break-word;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #b8e2d4; /* Pastel green background */
+  color: #333; /* Dark text for better contrast */
+  font-family: 'Nunito', sans-serif; /* Apply Nunito font to table headers */
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+table th:hover {
+  background-color: #a0d0bb; /* Slightly darker pastel green on hover */
+}
+
+table th .flex-container {
+  display: flex;
+  align-items: center;
+}
+
+table th .flex-text {
+  margin-right: 5px;
+}
+
+table th .sort-arrow {
+  margin-left: 5px;
+}
+
+table td {
+  background-color: #ffffff; /* White background for table rows */
+}
+
+table tr:hover td {
+  background-color: #f1f1f1; /* Light gray on hover */
+}
+
+/* Year Filter Dropdown */
+.year-filter {
+  margin-left: 10px;
+  padding: 5px 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.year-filter:focus {
+  outline: none;
+  border-color: #007bff; /* Blue border on focus */
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pagination button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.pagination button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Loading Spinner */
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  flex-direction: column;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
